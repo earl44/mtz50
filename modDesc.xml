@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="31">
+    <author>earl</author>
+    <version>1.0</version>
+    <title>
+        <en>MTZ 50</en>
+        <de>MTZ 50</de>
+    </title>
+    <description>
+        <en><![CDATA[Farming Simulator 17 - MTZ 50]]></en>
+        <de><![CDATA[Landwirtschafts-Simulator 17 - MTZ 50]]></de>
+        <fr><![CDATA[Farming Simulator 17 - MTZ 50]]></fr>
+        <pl><![CDATA[Farming Simulator 17 - MTZ 50]]></pl>
+    </description>
+    <iconFilename>store/50.dds</iconFilename>
+    <multiplayer supported="true" />
+
+	<specializations>
+	    <specialization name="Fenster" className="toggleAnimatedParts" filename="toggleAnimatedParts.lua"/>
+	    <specialization name="Hawe_Mousecontrol" className="Hawe_Mousecontrol" filename="Hawe_Mousecontrol.lua"/> 		
+	</specializations>
+	
+    <vehicleTypes>
+    <type name="mtz" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+        <specialization name="attacherJoints" />
+        <specialization name="frontloaderAttacher" />
+        <specialization name="lights" />
+        <specialization name="animatedVehicle" />
+        <specialization name="speedRotatingParts" />
+        <specialization name="motorized" />
+        <specialization name="steerable" />
+        <specialization name="drivable" />
+        <specialization name="articulatedAxis" />
+        <specialization name="cylindered" />
+        <specialization name="aiVehicle" />
+        <specialization name="crawler" />
+        <specialization name="bunkerSiloCompacter" />
+        <specialization name="honk" />
+        <specialization name="washable" />
+        <specialization name="mountable" />
+        <specialization name="Fenster" />
+        <specialization name="Hawe_Mousecontrol" />
+    </type>
+    </vehicleTypes>
+    <storeItems>
+        <storeItem rootNode="vehicle" xmlFilename="deutzAgroStar661.xml"/>
+    </storeItems>
+    
+    <inputBindings>
+    	<input name="bajto" key1="KEY_KP_7" button="" />
+        <input name="jajto" key1="KEY_KP_9" button="" />
+        <input name="bajtole" key1="KEY_KP_4" button="" />
+        <input name="motor" key1="KEY_KP_8" button="" />
+        <input name="buko" key1="KEY_KP_5" button="" />
+        <input name="motorbuko" key1="KEY_KP_0" button="" />
+     </inputBindings>
+</modDesc>
