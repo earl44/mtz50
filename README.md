@@ -8,3 +8,5 @@ Mtz 50 Base Script
 - Change Tire
 - Color choice
 - Variable Body
+
+Tested Game Version 1.2
