@@ -1,2 +1,10 @@
 # mtz50
-FS 17 Mtz 50 Mod
+Farming Simulator 2017 Mod
+
+Mtz 50 Base Script
+
+- Engine Setup
+- Open doors, hood
+- Change Tire
+- Color choice
+- Variable Body
