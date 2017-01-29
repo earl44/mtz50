@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="31">
     <author>earl</author>
-    <version>1.0</version>
+    <version>0.1</version>
     <title>
         <en>MTZ 50</en>
         <de>MTZ 50</de>
@@ -17,7 +17,6 @@
 
 	<specializations>
 	    <specialization name="Fenster" className="toggleAnimatedParts" filename="toggleAnimatedParts.lua"/>
-	    <specialization name="Hawe_Mousecontrol" className="Hawe_Mousecontrol" filename="Hawe_Mousecontrol.lua"/> 		
 	</specializations>
 	
     <vehicleTypes>
@@ -39,7 +38,6 @@
         <specialization name="washable" />
         <specialization name="mountable" />
         <specialization name="Fenster" />
-        <specialization name="Hawe_Mousecontrol" />
     </type>
     </vehicleTypes>
     <storeItems>

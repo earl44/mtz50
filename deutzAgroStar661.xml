@@ -160,8 +160,8 @@
     </differentialConfigurations>
 
     <motorConfigurations>
-        <motorConfiguration name="Mtz 50" hp="50" price="0">
-            <motor torqueScale="0.33" minRpm="1000" maxRpm="2200" maxForwardSpeed="31" maxBackwardSpeed="15" brakeForce="3.5" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.0012" minForwardGearRatio="14.5" maxForwardGearRatio="300" minBackwardGearRatio="40" maxBackwardGearRatio="300">
+        <motorConfiguration name="D-50" hp="50" price="0">
+            <motor torqueScale="0.33" minRpm="800" maxRpm="1600" maxForwardSpeed="24" maxBackwardSpeed="5" brakeForce="3.5" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.0012" minForwardGearRatio="14.5" maxForwardGearRatio="300" minBackwardGearRatio="40" maxBackwardGearRatio="300">
                 <torque normRpm="0.45" torque="0.9"/>
                 <torque normRpm="0.5" torque="0.97"/>
                 <torque normRpm="0.59" torque="1"/>
@@ -170,8 +170,8 @@
                 <torque normRpm="1" torque="0.72"/>
             </motor>
         </motorConfiguration>
-        <motorConfiguration name="Mtz 80" hp="80" price="1000">
-            <motor torqueScale="0.606" minRpm="1000" maxRpm="2200" maxForwardSpeed="43" maxBackwardSpeed="15" brakeForce="4.5" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.001" minForwardGearRatio="14.5" maxForwardGearRatio="300" minBackwardGearRatio="40" maxBackwardGearRatio="300">
+        <motorConfiguration name="D-240" hp="80" price="1000">
+            <motor torqueScale="0.606" minRpm="800" maxRpm="2200" maxForwardSpeed="33" maxBackwardSpeed="9" brakeForce="4.5" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.001" minForwardGearRatio="14.5" maxForwardGearRatio="300" minBackwardGearRatio="40" maxBackwardGearRatio="300">
                 <torque normRpm="0.45" torque="0.9"/>
                 <torque normRpm="0.5"  torque="0.97"/>
                 <torque normRpm="0.59" torque="1"/>
@@ -473,7 +473,9 @@
         <colorNode node="1>4|0|1|2" />
         <colorNode node="1>4|0|1|5" />	
         <colorNode node="1>5|0|1|1" />
-        <colorNode node="1>5|0|1|2" />									
+        <colorNode node="1>5|0|1|2" />	
+        
+        <colorNode node="0>7|0|9|3" />						
     </baseColorConfigurations>
     
 	<rimColorConfigurations>
@@ -489,6 +491,25 @@
         <colorNode node="0>0" />
         <colorNode node="0>1" />
     </rimColorConfigurations>
+    
+    	<gearboxMogli autoStartStop="false" maxAIRange2="3">
+		
+			<gears defaultGear="6" shiftTimeMs="800" speedMatching="true">
+				<gear speed="0.00" name="N"/>
+				<gear forwardOnly="true" speed="1.55" name="1"/>
+				<gear forwardOnly="true" speed="2.63" name="2"/>
+				<gear forwardOnly="true" speed="5.25" name="3"/>
+				<gear forwardOnly="true" speed="6.45" name="4"/>
+				<gear forwardOnly="true" speed="7.68" name="5"/>
+				<gear forwardOnly="true" speed="9.00" name="6"/>
+				<gear forwardOnly="true" speed="11.00" name="7"/>
+				<gear speed="3.30" reverseOnly="true" name="R1"/>
+				<gear forwardOnly="true" speed="13.00"  name="8"/>
+				<gear forwardOnly="true" speed="24.30" name="9"/>
+				<gear speed="5.60" reverseOnly="true" name="R2"/>				
+			</gears>
+
+		</gearboxMogli>	
 
     
 </vehicle>
