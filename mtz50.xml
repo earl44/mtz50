@@ -16,7 +16,7 @@
         <dailyUpkeep>250</dailyUpkeep>
         <lifetime>600</lifetime>
         <rotation>0</rotation>
-        <brand>LIZARD</brand>
+        <brand>MTZ</brand>
         <category>tractors</category>
         <fieldJob sizeCategory="1" typeCategory="tractor" hasFrontAndBackHydraulics="false" />
         <vertexBufferMemoryUsage>1728608</vertexBufferMemoryUsage>
@@ -187,7 +187,7 @@
         </motorConfiguration>
     </motorConfigurations>
 
-    <fuelCapacity>290</fuelCapacity>
+    <fuelCapacity>120</fuelCapacity>
 
     <cameras count="2">
         <camera1 index="0>5|13|0" rotatable="true" rotateNode="0>5|13" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="3.5" transMax="35" >
@@ -204,19 +204,15 @@
             <topArm rotationNode="0>5|26" translationNode="0>5|26|0" referenceNode="0>5|26|0|0" zScale="-0.1" />
             <schema position="1 0" rotation="0" invertX="false" />
         </attacherJoint>
-        <!-- trailer attacher -->
         <attacherJoint index="0>5|8|0|2|3|0" transNodeMinY="0.4" transNodeMaxY="1" jointType="trailer" lowerRotLimit="10 50 50" upperRotRotationOffset="0" allowsJointLimitMovement="false" ptoOutputNode="0>5|15" comboTime="1" >
             <schema position="1 0" rotation="0" invertX="false" />
         </attacherJoint>
-        <!-- trailer attacher -->
         <attacherJoint index="0>5|24|0|0" transNodeMinY="0.4" transNodeMaxY="1" jointType="trailer" lowerRotLimit="10 50 50" upperRotRotationOffset="0" allowsJointLimitMovement="false" ptoOutputNode="0>5|15" comboTime="1" >
             <schema position="1 0" rotation="0" invertX="false" />
         </attacherJoint>
-        <!-- trailer attacher -->
         <attacherJoint index="0>5|18|0" transNodeMinY="0.4" transNodeMaxY="1" jointType="trailer" lowerRotLimit="10 50 50" upperRotRotationOffset="0" allowsJointLimitMovement="false" comboTime="1" >
             <schema position="1 0" rotation="0" invertX="false" />
         </attacherJoint> 
-        <!-- trailer attacher -->
         <attacherJoint index="0>5|8|0|2|3|0" transNodeMinY="0.4" transNodeMaxY="1" jointType="trailerLow" lowerRotLimit="10 50 50" upperRotRotationOffset="0" allowsJointLimitMovement="false" ptoOutputNode="0>5|15" comboTime="1" >
             <schema position="1 0" rotation="0" invertX="false" />
         </attacherJoint> 
@@ -297,23 +293,18 @@
         <brakeLight decoration="0>5|19" />
     </brakeLights>
     
-    <turnLights>
-        <turnLightLeft decoration="0>5|21" />
-        <turnLightRight decoration="0>5|22" />
-    </turnLights>
-
     <lights>
         <low>
             <light decoration="0>5|20" lightTypes="0 1" />
             <light decoration="0>10" lightTypes="0 1" />
             <light realLight="0>5|20|0" lightTypes="0" excludedLightTypes="3" /> 
-            <light realLight="0>5|25|0" decoration="0>5|25" lightTypes="1"/>
+            <light realLight="0>5|25|0"  lightTypes="1"/>
         </low>
         <high>
             <light decoration="0>5|20" lightTypes="0 1" />
             <light decoration="0>10" lightTypes="0 1" />
             <light realLight="0>5|20|0" lightTypes="0" excludedLightTypes="3" />
-            <light realLight="0>5|25|0" decoration="0>5|25" lightTypes="1"/>
+            <light realLight="0>5|25|0"  lightTypes="1"/>
         </high>
         <states>
             <state lightTypes="0" />

@@ -12,7 +12,7 @@
         <fr><![CDATA[Farming Simulator 17 - MTZ 50]]></fr>
         <pl><![CDATA[Farming Simulator 17 - MTZ 50]]></pl>
     </description>
-    <iconFilename>store/50.dds</iconFilename>
+    <iconFilename>store/earl.dds</iconFilename>
     <multiplayer supported="true" />
 
 	<specializations>
@@ -41,8 +41,12 @@
     </type>
     </vehicleTypes>
     <storeItems>
-        <storeItem rootNode="vehicle" xmlFilename="deutzAgroStar661.xml"/>
+        <storeItem rootNode="vehicle" xmlFilename="mtz50.xml"/>
     </storeItems>
+    
+    <brands>
+        <brand name="MTZ" title="MTZ" image="store/mtzlogo.dds"/>
+    </brands>
     
     <inputBindings>
     	<input name="bajto" key1="KEY_KP_7" button="" />
