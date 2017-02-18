@@ -9,5 +9,6 @@ Mtz 50 Base Script
 - Color choice
 - Variable Body
 * Frontloader attacher
+* Gearbox AddOn ready
 
 Tested Game Version 1.4.2
