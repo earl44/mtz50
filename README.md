@@ -8,5 +8,6 @@ Mtz 50 Base Script
 - Change Tire
 - Color choice
 - Variable Body
+* Frontloader attacher
 
-Tested Game Version 1.2
+Tested Game Version 1.4.2
