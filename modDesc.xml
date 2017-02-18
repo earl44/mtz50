@@ -17,6 +17,7 @@
 
 	<specializations>
 	    <specialization name="Fenster" className="toggleAnimatedParts" filename="toggleAnimatedParts.lua"/>
+	    <!--specialization name="levelerr" className="levelerr" filename="levelerr.lua"/-->
 	</specializations>
 	
     <vehicleTypes>
@@ -38,6 +39,7 @@
         <specialization name="washable" />
         <specialization name="mountable" />
         <specialization name="Fenster" />
+        <!--specialization name="levelerr" /-->
     </type>
     </vehicleTypes>
     <storeItems>

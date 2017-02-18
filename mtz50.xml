@@ -289,29 +289,6 @@
 
     <schemaOverlay file="$dataS2/menu/schemas/vehicleSchema.png" fileSelected="$dataS2/menu/schemas/vehicleSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0.5 0" />
     
-    <brakeLights>
-        <brakeLight decoration="0>5|19" />
-    </brakeLights>
-    
-    <lights>
-        <low>
-            <light decoration="0>5|20" lightTypes="0 1" />
-            <light decoration="0>10" lightTypes="0 1" />
-            <light realLight="0>5|20|0" lightTypes="0" excludedLightTypes="3" /> 
-            <light realLight="0>5|25|0"  lightTypes="1"/>
-        </low>
-        <high>
-            <light decoration="0>5|20" lightTypes="0 1" />
-            <light decoration="0>10" lightTypes="0 1" />
-            <light realLight="0>5|20|0" lightTypes="0" excludedLightTypes="3" />
-            <light realLight="0>5|25|0"  lightTypes="1"/>
-        </high>
-        <states>
-            <state lightTypes="0" />
-            <state lightTypes="0 1" />
-        </states>
-    </lights>
-    
     <indoorHud>
         <fuel animName="fuelDisplay" />
         <rpm animName="rpmDisplay" />
@@ -378,10 +355,10 @@
     
 	<baseColorConfigurations>
         <baseColorConfiguration color="1 0 0 1" />
-        <baseColorConfiguration color="0.8 0 0 1" price="1000" icon="$dataS2/menu/hud/configurations/config_color.png" />
-		<baseColorConfiguration color="0.6 0 0 1" price="1000" icon="$dataS2/menu/hud/configurations/config_color.png" />
-		<baseColorConfiguration color="0.4 0 0 1" price="1000" icon="$dataS2/menu/hud/configurations/config_color.png" />
-		<baseColorConfiguration color="0.2 0 0 1" price="1000" icon="$dataS2/menu/hud/configurations/config_color.png" />
+        <baseColorConfiguration color="1 0.1 0.0 1" price="1000" icon="$dataS2/menu/hud/configurations/config_color.png" />
+		<baseColorConfiguration color="1 0.1 0.05 1" price="1000" icon="$dataS2/menu/hud/configurations/config_color.png" />
+		<baseColorConfiguration color="0.2 0.62 1.0 1" price="1000" icon="$dataS2/menu/hud/configurations/config_color.png" />
+		<baseColorConfiguration color="1 1 0.65 1" price="1000" icon="$dataS2/menu/hud/configurations/config_color.png" />
         <baseColorConfiguration color="0.1 0 0 1" price="1000" icon="$dataS2/menu/hud/configurations/config_color.png" />
         <baseColorConfiguration color="0.4 0.1 0.1 1" price="1000" icon="$dataS2/menu/hud/configurations/config_color.png" />
         <colorNode node="0>7|0|0|0|1" />
@@ -466,7 +443,8 @@
         <colorNode node="1>5|0|1|1" />
         <colorNode node="1>5|0|1|2" />	
         
-        <colorNode node="0>7|0|9|3" />						
+        <colorNode node="0>7|0|9|3" />	
+        <colorNode node="0>16|0" />		
     </baseColorConfigurations>
     
 	<rimColorConfigurations>
@@ -485,7 +463,7 @@
     
     	<gearboxMogli autoStartStop="false" maxAIRange2="3">
 		
-			<gears defaultGear="6" shiftTimeMs="800" speedMatching="true">
+			<gears defaultGear="6" shiftTimeMs="800" speedMatching="true" reverseReset="true">
 				<gear speed="0.00" name="N"/>
 				<gear forwardOnly="true" speed="1.55" name="1"/>
 				<gear forwardOnly="true" speed="2.63" name="2"/>
@@ -501,6 +479,50 @@
 			</gears>
 
 		</gearboxMogli>	
+    <lights>
+        <low>
+            <light                       decoration="0>17|0|0"   lightTypes="0 3" />
+            <light realLight="0>17|0|1"                          lightTypes="0" excludedLightTypes="3" /> <!--FrontLights-->
+            <light                       decoration="0>17|2|0"   lightTypes="0 1"/> <!--BackLights-->
+            <light realLight="0>17|1|0|1" decoration="0>17|1|0|0" lightTypes="1"/> <!--WorklightBack-->
+            <light realLight="0>17|0|2"                          lightTypes="3"/> <!--HighBeam -->
+        </low>
+        <high>
+            <light                       decoration="0>17|0|0"   lightTypes="0 3" />
+            <light realLight="0>17|0|3"                          lightTypes="0" excludedLightTypes="2 3" /> <!--FrontLights-->
+            <light realLight="0>17|2|1"   decoration="0>17|2|0"   lightTypes="0 3" /> <!--BackLights-->
+            <light realLight="0>17|1|0|2" decoration="0>17|1|0|0" lightTypes="1" /> <!--WorklightBack  -->
+            <light realLight="0>17|0|4"                          lightTypes="3" excludedLightTypes="2" /> <!--HighBeam-->
+        </high>
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+            <state lightTypes="0 1 2" />
+        </states>
+    </lights>
 
+    <brakeLights>
+        <brakeLight realLight="0>17|2|1" decoration="0>17|4|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft realLight="0>17|3|0|1" decoration="0>17|3|0|0" />
+        <turnLightLeft realLight="0>17|3|0|2" />
+        <turnLightRight realLight="0>17|3|1|1" decoration="0>17|3|1|0" />
+        <turnLightRight realLight="0>17|3|1|2" />
+    </turnLights>
+	
+	<frontloaderConfigurations>
+        <frontloaderConfiguration name="$l10n_ui_no" price="0" >
+            <objectChange node="0>16|0" visibilityActive="false" />
+        </frontloaderConfiguration>
+        <frontloaderConfiguration name="$l10n_ui_yes" price="800" icon="$dataS2/menu/hud/configurations/config_loader.png" >
+            <objectChange node="0>16|0" visibilityActive="true" visibilityInactive="false"/>
+            <!-- frontloader attacher -->
+            <attacherJoint index="0>16|0|0" jointType="attachableFrontloader" upperRotation="0 0 0" lowerRotation="0 0 0" lowerTransLimit="0 0 0" lowerRotLimit="0 0 0" moveTime="2" frontAxisLimitJoint="true">
+                <schema position="0 0.4" rotation="0" invertX="true" />
+            </attacherJoint>
+        </frontloaderConfiguration>
+    </frontloaderConfigurations>
     
 </vehicle>
